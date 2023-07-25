@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <main.h>
 
 /**
  * main - print a string with puthchar
