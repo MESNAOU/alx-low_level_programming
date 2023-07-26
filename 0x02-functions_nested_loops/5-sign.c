@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * print_sign - chech the sign pf a number
  *@n: char to test
