@@ -5,15 +5,15 @@
  */
 void print_to_98(int n)
 {
-	int i=n;
+	int i = n;
 
-	while(i != 98)
+	while (i != 98)
 	{
-		printf("%d, ",i);
-		if(i < 98)
+		printf("%d, ", i);
+		if (i < 98)
 		{
 			i++;
-		}else
+		} else
 			i--;
 	}
 	printf("98\n");
