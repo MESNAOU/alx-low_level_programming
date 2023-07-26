@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _isupper - chech for uppercase
+ * _isdigit - chech if it's a digit
  * @c: checked character
  *
  * Return: a boolean
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
 	if (c < '0' || c > '9')
 	{
