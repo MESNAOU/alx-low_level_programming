@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "main.h"
+#include "6-abs.c"
 /**
  * print_last_digit - get unity number
  *@n: char to test
@@ -9,8 +10,8 @@ int print_last_digit(int n)
 {
 	int r;
 
-	r=n % 10;
-	putchar(-1);
+	r=_abs(n);
+	r%= 10;
 	putchar(r+48);
 	return (r);
 }
