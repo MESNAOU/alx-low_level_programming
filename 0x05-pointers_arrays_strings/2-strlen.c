@@ -1,10 +1,21 @@
 #include "main.h"
 
 /**
- * fuction - desc
- * @vars
+ * _strlen - cal a string's length
+ * @s: string
  *
- * Return:
+ * Return: length
  */
 
+int _strlen(char *s)
+{
+	int i = 0;
+	char c = *s;
 
+	while (c != '\0')
+	{
+		i++;
+		c = *(s + i);
+	}
+	return (i);
+}
