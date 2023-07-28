@@ -2,11 +2,11 @@
 #include "2-strlen.c"
 
 /**
- * puts2 - prints a string in even
+ * puts_half - prints the second half of a string
  * @str: string's pointer
  */
 
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int nb = _strlen(str) / 2;
 	int i;
