@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 int _strlen(char *s);
 /**
@@ -12,15 +13,12 @@ char *_strcat(char *dest, char *src)
 {
 	int i = _strlen(dest);
 	int j = _strlen(src);
-	char d[i + j + 1];
 	int k;
 
-	for (k = 0; k < i; k++)
-		*(d + k) = *(dest + k);
 	for (k = 0; k < j; k++)
-		*(d + i + k) = *(dest + k);
-	*(d + i + j) = '\n';
-	return (d);
+		*(dest + i + k) = *(src + k);
+	*(dest + i + j) = '\0';
+	return (dest);
 }
 /**
  * _strlen - cal a string's length
@@ -40,4 +38,25 @@ int _strlen(char *s)
                 c = *(s + i);
         }
         return (i);
+}
+
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s1[98] = "Hello ";
+    char s2[] = "World!\n";
+    char *ptr;
+
+    printf("%s\n", s1);
+    printf("%s", s2);
+    ptr = _strcat(s1, s2);
+    printf("%s", s1);
+    printf("%s", s2);
+    printf("%s", ptr);
+    return (0);
 }
