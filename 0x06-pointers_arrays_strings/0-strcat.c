@@ -11,33 +11,24 @@ int _strlen(char *s);
 
 char *_strcat(char *dest, char *src)
 {
-	int i = _strlen(dest);
-	int j = _strlen(src);
-	int k;
-
-	for (k = 0; k < j; k++)
-		*(dest + i + k) = *(src + k);
-	*(dest + i + j) = '\0';
-	return (dest);
-}
-/**
- * _strlen - cal a string's length
- * @s: string
- *
- * Return: length
- */
-
-int _strlen(char *s)
-{
+	int k = 0;
 	int i = 0;
-	char c = *s;
+	char c = *(dest + k);
 
 	while (c != '\0')
 	{
-		i++;
-		c = *(s + i);
+		k++;
+		c = *(dest + k);
 	}
-	return (i);
+	c = *(src + i);
+	while (c != '\0')
+	{
+		*(dest + i + k) = *(src + i);
+		i++;
+		c = *(src + i);
+	}
+	*(dest + i + k) = '\0';
+	return (dest);
 }
 
 /**
