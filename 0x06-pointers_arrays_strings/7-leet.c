@@ -16,7 +16,7 @@ char *leet(char *s)
 
 	while (c != '\0')
 	{
-		for (k = 0; k < 10; k +=2)
+		for (k = 0; k < 20; k += 2)
 		{
 			if (*(exc + k) == c)
 				*(s + i) = *(exc + k + 1);
