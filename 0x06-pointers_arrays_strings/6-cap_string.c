@@ -28,6 +28,9 @@ char *cap_string(char *s)
 
 	while (c != '\0')
 	{
+		if ( i == 0)
+			if (*s <= 'z' && *s >= 'a')
+				*s = *s - 32;
 		if (separ(c, sep))
 		{
 			if (*(s + i + 1) <= 'z' && *(s + i + 1) >= 'a')
