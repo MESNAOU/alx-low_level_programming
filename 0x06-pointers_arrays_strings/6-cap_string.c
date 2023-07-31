@@ -31,7 +31,7 @@ char *cap_string(char *s)
 		if (separ(c, sep))
 		{
 			if (*(s + i + 1) <= 'z' && *(s + i + 1) >= 'a')
-				*(s + i + 1) = *(s + i + 1) + 32;
+				*(s + i + 1) = *(s + i + 1) - 32;
 		}
 		i++;
 		c = *(s + i);
@@ -57,3 +57,4 @@ int separ(char c, char *a)
 	}
 	return (0);
 }
+
