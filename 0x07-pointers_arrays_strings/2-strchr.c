@@ -4,7 +4,7 @@
 /**
  * _strchr -  first occurrence of c in s
  * @s: string
- * @b: character
+ * @c: character
  *
  *Return: character's pointer
  */
@@ -22,6 +22,6 @@ char *_strchr(char *s, char c)
 		i++;
 		ch = *(s + i);
 	}
-	return (NULL);
+	return ('\n');
 }
 
