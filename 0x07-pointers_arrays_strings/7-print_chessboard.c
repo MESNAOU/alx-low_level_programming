@@ -4,7 +4,7 @@
  * print_chessboard - modelize a chessboard
  * @a: board
  */
-void print_chessboard(char (*a)[8]);
+void print_chessboard(char (*a)[8])
 {
 	int i, j;
 
