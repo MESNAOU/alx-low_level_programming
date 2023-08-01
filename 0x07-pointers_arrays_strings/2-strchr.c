@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr -  Returns a pointer to the first occurrence of the character c in the string s
+ * _strchr -  first occurrence of c in s
  * @s: string
  * @b: character
  *
@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 {
 	int i = 0;
 	char ch = *s;
-	
+
 	while (ch != '\0')
 	{
 		if (ch == c)
@@ -21,6 +21,6 @@ char *_strchr(char *s, char c)
 		i++;
 		ch = *(s + i);
 	}
-	return ('\0');
+	return ('');
 }
 
