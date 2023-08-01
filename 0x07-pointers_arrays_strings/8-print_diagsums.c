@@ -19,6 +19,6 @@ void print_diagsums(int *a, int size)
 		s1 += *p1;
 		s2 += *p2;
 	}
-	printf("%d, %d", s1, s2);
+	printf("%d, %d\n", s1, s2);
 }
 
