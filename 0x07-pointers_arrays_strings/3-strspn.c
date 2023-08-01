@@ -2,7 +2,7 @@
 
 int in(char c, char *a);
 /**
- * _strspn - Returns the number of bytes in the initial segment of s which consist only of bytes from accept
+ * _strspn - number of firt bytes in s which consist only of bytes from accept
  * @s: string
  *
  * @accept: buffer
@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 		if (in(c, accept))
 		{
 			k++;
-		} else 
+		} else
 		{
 			return (k);
 		}
@@ -40,12 +40,14 @@ unsigned int _strspn(char *s, char *accept)
 int in(char c, char *a)
 {
 	int i = 0;
+	char a_c = *a;
 
-	for (i = 0; i < 13; i++)
+	while (a_c != '\0')
 	{
-		if (*(a + i) == c)
+		if (a_c == c)
 			return (1);
+		i++;
+		a_c = *(a + i);
 	}
 	return (0);
 }
-
