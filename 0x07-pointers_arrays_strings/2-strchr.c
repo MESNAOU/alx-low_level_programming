@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr -  first occurrence of c in s
@@ -21,6 +22,6 @@ char *_strchr(char *s, char c)
 		i++;
 		ch = *(s + i);
 	}
-	return (' ');
+	return (NULL);
 }
 
