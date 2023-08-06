@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-int len(char *s)
+int len(char *s);
 int chock(char *s, int l, int i);
 /**
  * is_palindrome - check if it's a palindrome
