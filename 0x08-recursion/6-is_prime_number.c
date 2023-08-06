@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-int devide(int n, int x);
+int divide(int n, int x);
 /**
  * is_prime_number - check if it's a prime number
  * @n: number
@@ -18,7 +18,7 @@ int is_prime_number(int n)
 	return (divide(n, 2));
 }
 /**
- * devide - test if x devide n
+ * divide - test if x devide n
  * @n: number
  * @x: supposed divisible
  *
