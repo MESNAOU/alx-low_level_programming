@@ -15,13 +15,13 @@ int wildcmp(char *s1, char *s2)
 	int f;
 	int pas;
 	int *ppas;
-	ppas = &pas;
 
+	ppas = &pas;
 	if (*s1 == '\0' && *s2 == '\0')
 		return (1);
 	else if (*s2 == '*')
 	{
-		if(*(s2 + 1) == '*')
+		if (*(s2 + 1) == '*')
 			return (wildcmp(s1, s2 + 1));
 		n = nextstar(s2);
 		f = findar(n, s2, 1, s1, 0, ppas);
@@ -47,10 +47,8 @@ int nextstar(char *s)
 		if (*(s + 1) == '\0')
 		{
 			return (1);
-		} else 
-		{
-			return (1 + nextstar(s + 1));
 		}
+		return (1 + nextstar(s + 1));
 	}
 	return (0);
 }
@@ -73,15 +71,13 @@ int findar(int n, char *s2, int i2, char *ps, int i1, int *ppas)
 		if (*(ps + i1) == *(s2 + i2))
 		{
 			return (findar(n, s2, i2 + 1, ps, i1 + 1, ppas));
-		} else
-		{
-			if (*(ps + i1) == '\0')
-			{
-				*ppas = i1 - n;
-				return (0);
-			} else
-				return (findar(n, s2, 1, ps, i1 - i2 + 2, ppas));
 		}
+		if (*(ps + i1) == '\0')
+		{
+			*ppas = i1 - n;
+			return (0);
+		}
+		return (findar(n, s2, 1, ps, i1 - i2 + 2, ppas));
 	}
 	*ppas = i1 - n;
 	return (1);
