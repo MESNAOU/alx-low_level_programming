@@ -43,11 +43,15 @@ int wildcmp(char *s1, char *s2)
 int nextstar(char *s)
 {
 	if (*(s + 1) != '*')
+	{
 		if (*(s + 1) == '\0')
 		{
 			return (1);
-		} else
+		} else 
+		{
 			return (1 + nextstar(s + 1));
+		}
+	}
 	return (0);
 }
 
